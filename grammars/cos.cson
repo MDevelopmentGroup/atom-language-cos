@@ -1,5 +1,9 @@
 'fileTypes': [
   'rtn'
+  'mac'
+  'inc'
+  'ro'
+  'rsa'
 ]
 'name': 'Caché ObjectScript'
 'patterns': [
