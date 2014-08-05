@@ -147,6 +147,9 @@
   'comment':
     'patterns': [
       {
+        'include': '#line-tail-comment'
+      }
+      {
         'include': '#line-comment'
       }
       {
@@ -162,14 +165,26 @@
         'name': 'keyword.control.source.isc.cos'
       '2':
         'name': 'keyword.other.source.isc.cos'
-    'match': '^\\s+((?i)#define)\\s+([A-Za-z][A-Za-z0-9]*)\\s+'
+    'match': '^\\s*((?i)#define)\\s+([A-Za-z][A-Za-z0-9]*)\\s+'
+  'directive-if':
+    'captures':
+      '1':
+        'name': 'keyword.control.source.isc.cos'
+      '2':
+        'name': 'keyword.other.source.isc.cos'
+    'match': '^\\s*((?i)#if|#elseif)\\s+(\S+)\\s+'
+  'directive-endif':
+    'captures':
+      '1':
+        'name': 'keyword.control.source.isc.cos'
+    'match': '^\\s*((?i)#endif|#else)'
   'directive-include':
     'captures':
       '1':
         'name': 'keyword.control.source.isc.cos'
       '2':
         'name': 'entity.type.name.source.isc.cos'
-    'match': '^\\s+((?i)#include)\\s+([A-Za-z][A-Za-z0-9]*)\\s+'
+    'match': '^\\s*((?i)#include)\\s+([A-Za-z][A-Za-z0-9]*)\\s+'
   'function':
     'comment': '$function'
     'match': '(\\$[A-Za-z]+)\\b'
@@ -184,8 +199,11 @@
       '3':
         'name': 'variable.language.source.isc.cos'
     'match': '(##(?i)CLASS)(\\()(([A-Za-z%][A-Za-z0-9]*)(\\.[A-Za-z%][A-Za-z0-9]*)*)(\\))'
+  'line-tail-comment':
+    'match': '\\s*(//|;).*$'
+    'name': 'comment.line.source.isc.cos'
   'line-comment':
-    'match': '\\s(//|;).*$'
+    'match': '^\\s*(//|;|#;).*$'
     'name': 'comment.line.source.isc.cos'
   'literal-number':
     'match': '(?<=[^A-Za-z0-9\\"])([0-9]*\\.?[0-9]+)(?=[^A-Z-a-z0-9\\"])'
@@ -280,6 +298,12 @@
       }
       {
         'include': '#directive-define'
+      }
+      {
+        'include': '#directive-if'
+      }
+      {
+        'include': '#directive-endif'
       }
     ]
   'set-expression':
