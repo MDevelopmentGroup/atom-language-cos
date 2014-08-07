@@ -172,7 +172,7 @@
         'name': 'keyword.control.source.isc.cos'
       '2':
         'name': 'keyword.other.source.isc.cos'
-    'match': '^\\s*((?i)#if|#elseif)\\s+(\S+)\\s+'
+    'match': '^\\s*((?i)#if)\\s+([^\\s]+)\\s+'
   'directive-endif':
     'captures':
       '1':
@@ -184,7 +184,7 @@
         'name': 'keyword.control.source.isc.cos'
       '2':
         'name': 'entity.type.name.source.isc.cos'
-    'match': '^\\s*((?i)#include)\\s+([A-Za-z][A-Za-z0-9]*)\\s+'
+    'match': '^\\s*((?i)#include)\\s+([A-Za-z%][A-Za-z0-9.%]*)\\s+'
   'function':
     'comment': '$function'
     'match': '(\\$[A-Za-z]+)\\b'
@@ -327,7 +327,7 @@
       }
     ]
   'tag-definition':
-    'match': '^([A-Za-z][A-Za-z0-9]*)\\b'
+    'match': '^([A-Za-z%][A-Za-z%.0-9]*)\\b'
     'name': 'entity.name.function.source.isc.cos'
   'tag-value':
     'captures':
