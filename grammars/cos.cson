@@ -1,3 +1,4 @@
+'scopeName': 'source.isc.cos'
 'fileTypes': [
   'rtn'
   'mac'
@@ -5,6 +6,7 @@
   'ro'
   'rsa'
 ]
+'firstLineMatch': '\\^.*Format=Cache'
 'name': 'Caché ObjectScript'
 'patterns': [
   {
@@ -327,7 +329,7 @@
       }
     ]
   'tag-definition':
-    'match': '^([A-Za-z%][A-Za-z%.0-9]*)\\b'
+    'match': '^([A-Za-z%0-9][A-Za-z%.0-9]*)\\b'
     'name': 'entity.name.function.source.isc.cos'
   'tag-value':
     'captures':
@@ -345,4 +347,3 @@
   'variable':
     'match': '\\^?([A-Za-z%][A-Za-z0-9]*)'
     'name': 'variable.language.source.isc.cos'
-'scopeName': 'source.isc.cos'

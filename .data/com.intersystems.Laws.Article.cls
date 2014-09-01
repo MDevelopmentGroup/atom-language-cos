@@ -1,16 +1,16 @@
-Class com.intersystems.Laws.Article Extends %Persistent [ StorageStrategy = "" ]
+п»їClass com.intersystems.Laws.Article Extends %Persistent [ StorageStrategy = "" ]
 {
 
-/// Часть %
+/// Р§Р°СЃС‚СЊ %
 Property PartN As %String(MAXLEN = 120);
 
-/// Раздел %
+/// Р Р°Р·РґРµР» %
 Property DivisionN As %String(MAXLEN = 120);
 
-/// Глава %
+/// Р“Р»Р°РІР° %
 Property ChapterN As %String(MAXLEN = 120);
 
-/// собственно текст статьи
+/// СЃРѕР±СЃС‚РІРµРЅРЅРѕ С‚РµРєСЃС‚ СЃС‚Р°С‚СЊРё
 Property Text As %String;
 
 <Storage name="Default">

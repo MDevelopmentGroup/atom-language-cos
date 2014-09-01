@@ -1,6 +1,8 @@
 'fileTypes': [
   'cls'
+  'udl'
 ]
+'scopeName': 'source.source.isc.udl'
 'firstLineMatch': '\\s*((?i)Include|Class|///)'
 'name': 'Caché Class'
 'patterns': [
@@ -592,6 +594,9 @@
       {
         'include': '#type-name'
       }
+      {
+        'include': '$self'
+      }
     ]
   'value-expression':
     'begin': '\\{'
@@ -601,7 +606,10 @@
       {
         'include': '#cos'
       }
-    ]
+      {
+        'include': '$self'
+      }
+]
   'value-literal':
     'comment': 'numeric constant'
     'match': '([0-9]+\\.?[0-9]*)|(\\.[0-9]+)'
@@ -626,7 +634,7 @@
       }
     ]
   'xdata-definition-line':
-    'begin': '\\G\\s*([A-Za-z%][A-Za-z0-9]*)\\s*'
+    'begin': '\\G\\s*([A-Za-z%.][A-Za-z.0-9]*)\\s*'
     'beginCaptures':
       '1':
         'name': 'entity.name.type.source.isc.udl'
@@ -645,4 +653,3 @@
         'include': 'source.css'
       }
     ]
-'scopeName': 'source.source.isc.udl'

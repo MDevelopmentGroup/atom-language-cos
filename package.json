@@ -1,7 +1,7 @@
 {
   "name": "language-cos",
   "version": "0.0.1",
-  "description": "Intersystems Cache language support in Atom",
+  "description": "Intersystems Caché ObjectScript language support in Atom",
   "repository": "https://github.com/atom/language-cos",
   "license": "MIT",
   "engines": {
